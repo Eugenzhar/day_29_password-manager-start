@@ -9,6 +9,10 @@ def save_password():
     print("save password")
     with open('datatext.txt', 'a') as f:
         f.write(f"{input_website1_1.get()},  {input_email1_2.get()}, {input_password1_3.get()} \n")
+    input_website1_1.delete(0, 100)
+    input_password1_3.delete(0, 100)
+    input_website1_1.focus()
+
 # ---------------------------- UI SETUP ------------------------------- #
 window = tkinter.Tk()
 window.title("Password Manager")
